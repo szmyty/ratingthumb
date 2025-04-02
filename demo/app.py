@@ -1,17 +1,19 @@
-
 import gradio as gr
 from gradio_ratingthumb import RatingThumb
 
+def handle_feedback(value):
+    return f"You selected: {value}"
 
-example = RatingThumb().example_value()
+with gr.Blocks() as demo:
+    gr.Markdown("### RatingThumb Component Demo")
 
-demo = gr.Interface(
-    lambda x:x,
-    RatingThumb(),  # interactive version of your component
-    RatingThumb(),  # static version of your component
-    # examples=[[example]],  # uncomment this line to view the "example version" of your component
-)
+    rating = RatingThumb(
+        icon="frontend/assets/search.svg"
+    )
 
+    output = gr.Textbox(label="Selected Feedback")
 
-if __name__ == "__main__":
-    demo.launch()
+    # Wire up the click event
+    rating.click(fn=handle_feedback, inputs=rating, outputs=output)
+
+demo.launch()
