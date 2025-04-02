@@ -1,0 +1,36 @@
+{
+  "name": "gradio_ratingthumb",
+  "version": "0.4.12",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "@gradio/client": "1.14.1",
+    "@gradio/image": "0.21.7",
+    "@gradio/upload": "0.15.7",
+    "@gradio/utils": "0.10.1"
+  },
+  "devDependencies": {
+    "@gradio/preview": "0.13.0"
+  },
+  "main": "./Index.svelte",
+  "main_changeset": true,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "gradio": "./Index.svelte",
+      "svelte": "./dist/Index.svelte",
+      "types": "./dist/Index.svelte.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gradio-app/gradio.git",
+    "directory": "js/button"
+  }
+}

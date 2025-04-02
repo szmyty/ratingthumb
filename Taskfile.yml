@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  demo:
+    desc: "Run the Gradio component development server with hot reload"
+    cmds:
+      - gradio cc dev
+    dir: .
+    silent: false
+
+  build:
+    desc: "Build the frontend component"
+    cmds:
+      - cd frontend && npm install && npm run build
+    silent: false

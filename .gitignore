@@ -1,0 +1,47 @@
+# ⛔ Python bytecode/cache
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*.pyi
+*$py.class
+__pycache__/
+.mypycache
+.ruff_cache
+.eggs/
+__tmp/*
+
+# 📦 Python build/dist
+build/
+dist/
+*.egg-info/
+
+# 🐍 Virtualenvs
+.venv/
+venv/
+
+# 🔐 Environment files
+.env
+.env.*
+
+# 🧱 Node/Vite (frontend)
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+
+# 🐍 Backend template cache (if using Jinja or similar)
+backend/**/templates/
+
+# 🌀 Gradio dev cache
+.gradio/
+
+# 💻 OS-specific files
+.DS_Store
+Thumbs.db
+
+# 🧠 Editor settings
+.vscode/
+.idea/
+
+# 🛠️ Task runner cache
+.task/
